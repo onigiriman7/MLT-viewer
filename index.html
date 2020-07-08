@@ -19,7 +19,7 @@
    <div >
     <model-viewer src="pv.glb" alt="A 3D model of an astronaut" camera-controls auto-rotate auto-rotate-delay="1000" exposure="0.5" camera-orbit="10deg 80deg 2.5m">
     </model-viewer></div>
-    <button  class="animate__animated" >HoMe</button>
+    <button onload="loadAudio"  class="animate__animated" >Moonlight</button>
     <video autoplay loop muted>
         <source src="vaporwave.mp4"/>
         
@@ -37,7 +37,19 @@
     </script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
+    <script type="text/javascript">
 
+        function loadAudio() {
+            var button = document.getElementById('button');
+            var audio = document.getElementById('audio');
+        
+            var onClick = function() {
+                audio.play(); // audio will load and then play
+            };
+        
+            button.addEventListener('click', onClick, false);
+        }
+        </script>
     </script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
