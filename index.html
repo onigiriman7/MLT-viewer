@@ -4,11 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-  />
-  <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
     <title>pvWaves</title>
 </head>
 
@@ -16,15 +13,19 @@
     <div id="root">
 
     </div>
-   <div >
-    <model-viewer src="pv.glb" alt="A 3D model of an astronaut" camera-controls auto-rotate auto-rotate-delay="1000" exposure="0.5" camera-orbit="10deg 80deg 2.5m">
-    </model-viewer></div>
-    <button id="button" onload="loadAudio" class="animate__animated" >Moonlight</button>
+    <div>
+        <model-viewer src="pv.glb" alt="A 3D model of an astronaut" camera-controls auto-rotate auto-rotate-delay="1000"
+            exposure="0.5" camera-orbit="10deg 80deg 2.5m">
+        </model-viewer>
+    </div>
+    <button id="button" onload="loadAudio" class="animate__animated">Moonlight</button>
     <video autoplay loop muted>
-        <source src="vaporwave.mp4"/>
-        
+        <source src="vaporwave.mp4" />
+
     </video>
-    <audio autoplay id="audio" loop>
+    <iframe src="pl.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe>
+    <audio autoplay id="playAudio" loop>
         <source src="pl.mp3" type="audio/mpeg">
     </audio>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
@@ -38,18 +39,14 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/javascript">
-
-        function loadAudio() {
-            var button = document.getElementById('button');
-            var audio = document.getElementById('audio');
-        
-            var onClick = function() {
-                setTimeout(function(){audio.play()}, 2000);
-            };
-        
-            button.addEventListener('click', onClick, false);
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (!isChrome) {
+            document.getElementById('#iframeAudio').remove()
         }
-        </script>
+        else {
+            document.getElementById('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+        }
+    </script>
     </script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
@@ -57,33 +54,37 @@
 
 </body>
 <style>
-    body,html{
-        height:100vh;
-        width:100vw;
-        padding:0;
-        margin:0;
+    body,
+    html {
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
         overflow: hidden;
     }
+
     model-viewer {
         height: 100vh;
         width: 100vw;
-        background:transparent;
+        background: transparent;
         z-index: 100;
         position: absolute;
     }
-    video{
+
+    video {
         object-fit: fill;
         height: 100vh;
         width: 100vw;
     }
-    button{
+
+    button {
         position: absolute;
-        padding:18px 24px;
+        padding: 18px 24px;
         font-size: 24px;
         top: 80%;
-        right:0;
+        right: 0;
         left: 42%;
-        margin-left:auto;
+        margin-left: auto;
         margin-right: auto;
         border: none;
         outline: none;
@@ -91,11 +92,12 @@
         border-radius: 7px;
         box-shadow: 0px 6px 0px 1px rgba(248, 97, 223, 0.822), 1px 1px 10px 1px black;
         z-index: 900;
-        color:white;
+        color: white;
         font-family: 'Galada', cursive;
     }
-    button:hover{
-        transform:scale(0.9);
+
+    button:hover {
+        transform: scale(0.9);
         box-shadow: 0px 1px 0px 1px rgba(255, 0, 212, 0.822), 1px 1px 10px 1px black;
         transition: 0.2s ease;
     }
