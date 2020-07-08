@@ -9,7 +9,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
   />
   <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>pvWaves</title>
 </head>
 
 <body>
@@ -19,12 +19,12 @@
    <div >
     <model-viewer src="pv.glb" alt="A 3D model of an astronaut" camera-controls auto-rotate auto-rotate-delay="1000" exposure="0.5" camera-orbit="10deg 80deg 2.5m">
     </model-viewer></div>
-    <button onload="loadAudio"  class="animate__animated" >Moonlight</button>
+    <button id="button" onload="loadAudio" class="animate__animated" >Moonlight</button>
     <video autoplay loop muted>
         <source src="vaporwave.mp4"/>
         
     </video>
-    <audio autoplay loop>
+    <audio autoplay id="audio" loop>
         <source src="pl.mp3" type="audio/mpeg">
     </audio>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
@@ -44,7 +44,7 @@
             var audio = document.getElementById('audio');
         
             var onClick = function() {
-                audio.play(); // audio will load and then play
+                setTimeout(function(){audio.play()}, 2000);
             };
         
             button.addEventListener('click', onClick, false);
