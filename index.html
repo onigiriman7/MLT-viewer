@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="https://i.dlpng.com/static/png/6287813-vaporwave-pc-icon-by-maerk-redbubble-vaporwave-icon-1000_1000_preview.png" type="image/x-icon">  
+    <link rel="shortcut icon"
+        href="https://i.dlpng.com/static/png/6287813-vaporwave-pc-icon-by-maerk-redbubble-vaporwave-icon-1000_1000_preview.png"
+        type="image/x-icon">
     <title>pvWaves</title>
 </head>
 
@@ -15,17 +17,18 @@
 
     </div>
     <div>
-        <model-viewer src="3d/pv.glb" alt="A 3D model of an astronaut" camera-controls auto-rotate auto-rotate-delay="1000"
-            exposure="0.5" camera-orbit="10deg 80deg 2.5m">
+        <model-viewer src="3d/pv.glb" alt="A 3D model of an astronaut" camera-controls auto-rotate
+            auto-rotate-delay="1000" exposure="0.5" camera-orbit="10deg 80deg 2.5m">
         </model-viewer>
     </div>
+    <a class="animate__animated animate__tada" id="button2" href="pages/about.html">View Portfolio</a>
     <button id="button" onclick=playMusic() class="animate__animated">Play Music</button>
     <button id="button1" onclick=pauseMusic() class="animate__animated">Pause Music</button>
     <video autoplay loop muted>
         <source src="med/vaporwave.mp4" />
 
     </video>
-    
+
     <audio id="playAudio" loop>
         <source src="med/pl.mp3" type="audio/mpeg">
     </audio>
@@ -40,14 +43,14 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/javascript">
-       var button = document.getElementById('button');
-       var audio = document.getElementById('playAudio');
-       function playMusic(){
-           audio.play();
-       }
-       function pauseMusic(){
-           audio.pause();
-       }
+        var button = document.getElementById('button');
+        var audio = document.getElementById('playAudio');
+        function playMusic() {
+            audio.play();
+        }
+        function pauseMusic() {
+            audio.pause();
+        }
     </script>
     </script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -63,6 +66,12 @@
         padding: 0;
         margin: 0;
         overflow: hidden;
+    }
+
+    .animate__animated.animate__tada {
+        --animate-duration: 5s;
+        --animate-repeat: 7;
+       
     }
 
     model-viewer {
@@ -103,6 +112,7 @@
         box-shadow: 0px 1px 0px 1px rgba(255, 0, 212, 0.822), 1px 1px 10px 1px black;
         transition: 0.2s ease;
     }
+
     #button1 {
         position: absolute;
         padding: 18px 24px;
@@ -124,6 +134,33 @@
 
     #button1:hover {
         transform: scale(0.9);
+        box-shadow: 0px 1px 0px 1px rgba(255, 0, 212, 0.822), 1px 1px 10px 1px black;
+        transition: 0.2s ease;
+    }
+
+    #button2 {
+        position: absolute;
+        padding: 14px 10px;
+        font-size: 24px;
+        top: 0%;
+        right: 0;
+        left: 80%;
+        width: 100px;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        outline: none;
+        background-color: rgba(238, 117, 212, 0.753);
+        border-radius: 7px;
+        box-shadow: 0px 6px 0px 1px rgba(248, 97, 223, 0.822), 1px 1px 10px 1px black;
+        z-index: 900;
+        color: white;
+        font-family: 'Galada', cursive;
+    }
+
+    #button2:hover {
+        padding: 6px 10px;
         box-shadow: 0px 1px 0px 1px rgba(255, 0, 212, 0.822), 1px 1px 10px 1px black;
         transition: 0.2s ease;
     }
