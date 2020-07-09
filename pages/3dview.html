@@ -27,7 +27,7 @@
     ></model-viewer>
 
     <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'London')">
+      <button class="tablinks" onclick="openCity(event, 'London');remove()">
         Left
       </button>
       <button class="tablinks" onclick="playMusic()">
@@ -36,19 +36,19 @@
       <button class="tablinks" onclick="pauseMusic()">
         Pause Music
       </button>
-      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Right</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo');remove()">Right</button>
     </div>
     <audio id="playAudio" loop>
       <source src="../med/bg.mp3" type="audio/mpeg">
   </audio>
     <div id="London" class="tabcontent">
-      <a href="#"><h3>icinpro</h3></a>
+      <a href="#"><h2>icinpro</h3></a>
     </div>
 
     <div id="Tokyo" class="tabcontent">
       <a href="#"> <h3>coolest RPS</h3></a>
     </div>
-
+    <h2 id="lol">Click Left or Right</h2>
     <!-- <div>
       <img src="frame.png" />
     </div> -->
@@ -73,7 +73,10 @@
         function pauseMusic() {
             audio.pause();
         }
-
+      function remove(){
+        var x= document.getElementById("lol");
+        x.parentElement.removeChild(x);
+      }
     </script>
   </body>
   <style>
@@ -173,6 +176,21 @@
       color: lightblue;
       text-shadow:0px 20px 0px rgb(86, 86, 224), 1px 1px 18px ghostwhite;
     }
+    h2 {
+      display: block;
+      width: 60%;
+      position: absolute;
+      font-size: 100px;
+      color: white;
+      text-shadow:0px 10px 0px grey, 1px 1px 10px ghostwhite;
+      top:50%;
+      animation: bounce 0.8s infinite;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      margin: 0;
+      text-align: center;
+    }
+ 
     @keyframes bounce {
       from {margin-top: 0;}
       to {margin-top: 8px;}
