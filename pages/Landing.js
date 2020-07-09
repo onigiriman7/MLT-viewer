@@ -1,8 +1,10 @@
+
+
 function Landing() {
     return React.createElement(
         'div',
         null,
-        'hello'
+        'oll'
     );
 }
 var domContainer = document.querySelector('#landign');

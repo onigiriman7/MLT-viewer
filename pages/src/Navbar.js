@@ -1,4 +1,3 @@
-
 function Navbar() {
     const [width, setWidth] = React.useState(0);
     React.useEffect(() => {
