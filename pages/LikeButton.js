@@ -1,5 +1,3 @@
-'use strict';
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30,11 +28,15 @@ var LikeButton = function (_React$Component) {
       }
 
       return React.createElement(
-        'button',
-        { onClick: function onClick() {
-            return _this2.setState({ liked: true });
-          } },
-        'Like'
+        'div',
+        null,
+        React.createElement(
+          'button',
+          { onClick: function onClick() {
+              return _this2.setState({ liked: true });
+            } },
+          'Like'
+        )
       );
     }
   }]);
@@ -42,5 +44,5 @@ var LikeButton = function (_React$Component) {
   return LikeButton;
 }(React.Component);
 
-var domContainer = document.querySelector('#like_button_container');
+var domContainer = document.querySelector('#navbar');
 ReactDOM.render(React.createElement(LikeButton, null), domContainer);
