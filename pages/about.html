@@ -17,8 +17,16 @@
     </div>
     <div class="sec2"></div>
     <div class="sec2"></div>
-    <div class="sec2"></div>
-    <div class="sec2"></div>
+    <div class="sec2">
+        <h1 class="elemtn">
+            HHHHHH
+        </h1>
+    </div>
+    <div class="sec2">
+        <h1 class="element2">
+
+        </h1>
+    </div>
 
 
 
@@ -29,7 +37,14 @@
     <script>
         var typed = new Typed(".element", {
             strings: ["Hi, welcome to PV Productions", "We hope you enjoy your stay", "Scroll to begin"],
-            typeSpeed: 100,
+            typeSpeed: 70,
+            showCursor: true,
+            cursorChar: "_",
+            autoInsertCss: true,
+        })
+        var typed2 = new Typed(".element2", {
+            strings: ["Did you like what you just saw?", "I'm sure you did", "So, what are you waiting for?", "Hit us up at pvrod@gmail.com today!"],
+            typeSpeed: 70,
             showCursor: true,
             cursorChar: "_",
             autoInsertCss: true,
@@ -66,18 +81,21 @@
         background-color: transparent;
     }
 
-    .element {
+    h1 {
         font-size: 72px;
-        z-index: 100;
+        z-index: 1000;
         width: 100%;
         color: white;
         text-align: center;
-        text-shadow: 0px 3px 2px lightgrey;
+       
     }
     .sec2{
-        background-color: grey;
+        background-color: transparent;
         height: 100vh;
+        z-index: 100;
+        width: 100vw;
     }
+ 
 </style>
 
 </html>
