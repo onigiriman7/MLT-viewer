@@ -5,61 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PV Productions - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="frame">
-        <div id="navbar">
-            HELLO
-        </div>
-        <button class="arc1">
-            Left
-        </button>
-        <button class="arc2">
-            Right
-        </button>
-        
+
+
+    <div id="particles-js" class="wrapper"> </div>
+    <div class="cover">
+        <h1 class="element"></h1>
     </div>
-   
+    <div class="sec2"></div>
+    <div class="sec2"></div>
+    <div class="sec2"></div>
+    <div class="sec2"></div>
 
 
 
-
-    <script type="module" src="Navbar.js"></script> 
+    <script type="module" src="Navbar.js"></script>
     <script type="module" src="Landing.js"></script>
     <script type="module" src="Main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        var typed = new Typed(".element", {
+            strings: ["Hi, welcome to PV Productions", "We hope you enjoy your stay", "Scroll to begin"],
+            typeSpeed: 100,
+            showCursor: true,
+            cursorChar: "_",
+            autoInsertCss: true,
+        })
+    </script>
+    <script src="particles.js-master/particles.js"></script>
+    <script src="particles.js-master/demo/js/app.js"></script>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 </body>
 <style>
-    html,body{
-        margin:0;
+    html,
+    body {
+        margin: 0;
         padding: 0;
         overflow-x: hidden;
+        font-family: 'Poppins', sans-serif;
     }
-    .frame{
-        z-index: 100;
-        position: relative;
+
+    .wrapper {
+        position: fixed;
+        background-color: black;
         height: 100vh;
         width: 100vw;
-        background-image: url('../med/frame.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-      
     }
-    #navbar, #landign{
-        position: absolute;
-        color:white;
+
+    .cover {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        background-color: transparent;
     }
-    .arc1{
-        z-index: 901;
-        position: fixed;
-        float:right;
-        margin-right: -100px;
+
+    .element {
+        font-size: 72px;
+        z-index: 100;
+        width: 100%;
+        color: white;
+        text-align: center;
+        text-shadow: 0px 3px 2px lightgrey;
     }
-    .arc2{
-        z-index:901;
-        position: fixed;
+    .sec2{
+        background-color: grey;
+        height: 100vh;
     }
 </style>
+
 </html>
