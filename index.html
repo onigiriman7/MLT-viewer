@@ -22,6 +22,7 @@
         </model-viewer>
     </div>
     <a class="animate__animated animate__tada" id="button2" href="pages/3dview.html">View Portfolio</a>
+    <a class="animate__animated animate__tada" id="button3" href="pages/3dview.html">About Us</a>
     <button id="button" onclick=playMusic() class="animate__animated">Play Music</button>
     <button id="button1" onclick=pauseMusic() class="animate__animated">Pause Music</button>
     <video autoplay loop muted>
@@ -160,6 +161,32 @@
     }
 
     #button2:hover {
+        padding: 6px 10px;
+        box-shadow: 0px 1px 0px 1px rgba(255, 0, 212, 0.822), 1px 1px 10px 1px black;
+        transition: 0.2s ease;
+    }
+
+    #button3 {
+        position: absolute;
+        padding: 14px 10px;
+        font-size: 24px;
+        top: 0%;
+   
+        width: 100px;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: auto;
+        border: none;
+        outline: none;
+        background-color: rgba(238, 117, 212, 0.753);
+        border-radius: 7px;
+        box-shadow: 0px 6px 0px 1px rgba(248, 97, 223, 0.822), 1px 1px 10px 1px black;
+        z-index: 900;
+        color: white;
+        font-family: 'Galada', cursive;
+    }
+
+    #button3:hover {
         padding: 6px 10px;
         box-shadow: 0px 1px 0px 1px rgba(255, 0, 212, 0.822), 1px 1px 10px 1px black;
         transition: 0.2s ease;
