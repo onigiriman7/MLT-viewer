@@ -36,17 +36,21 @@
       <button class="tablinks" onclick="pauseMusic()">
         Pause Music
       </button>
-      <button class="tablinks" onclick="openCity(event, 'Tokyo');remove()">Right</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo');remove()">
+        Right
+      </button>
     </div>
     <audio id="playAudio" loop>
-      <source src="../med/bg.mp3" type="audio/mpeg">
-  </audio>
+      <source src="../med/bg.mp3" type="audio/mpeg" />
+    </audio>
     <div id="London" class="tabcontent">
       <a href="https://icinprobengaluru.now.sh/"><h3>icinpro</h3></a>
     </div>
 
     <div id="Tokyo" class="tabcontent">
-      <a href="https://github.com/onigiriman7/ReactNative-MiniGame"> <h3>coolest RPS</h3></a>
+      <a href="https://github.com/onigiriman7/ReactNative-MiniGame">
+        <h3>coolest RPS</h3></a
+      >
     </div>
     <h2 id="lol">Click Left or Right</h2>
     <!-- <div>
@@ -66,15 +70,15 @@
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " active";
       }
-      var audio = document.getElementById('playAudio');
-        function playMusic() {
-            audio.play();
-        }
-        function pauseMusic() {
-            audio.pause();
-        }
-      function remove(){
-        var x= document.getElementById("lol");
+      var audio = document.getElementById("playAudio");
+      function playMusic() {
+        audio.play();
+      }
+      function pauseMusic() {
+        audio.pause();
+      }
+      function remove() {
+        var x = document.getElementById("lol");
         x.parentElement.removeChild(x);
       }
     </script>
@@ -86,8 +90,8 @@
     a {
       color: white;
     }
-    a:hover{
-      color:green;
+    a:hover {
+      color: green;
     }
 
     /* Style the tab */
@@ -164,17 +168,17 @@
       position: absolute;
       font-size: 140px;
       color: white;
-      text-shadow:0px 20px 0px grey, 1px 1px 18px ghostwhite;
-      top:50%;
+      text-shadow: 0px 20px 0px grey, 1px 1px 18px ghostwhite;
+      top: 50%;
       animation: bounce 0.8s infinite;
       left: 50%;
       transform: translate(-50%, -60%);
       margin: 0;
       text-align: center;
     }
-    h3:hover{
+    h3:hover {
       color: lightblue;
-      text-shadow:0px 20px 0px rgb(86, 86, 224), 1px 1px 18px ghostwhite;
+      text-shadow: 0px 20px 0px rgb(86, 86, 224), 1px 1px 18px ghostwhite;
     }
     h2 {
       display: block;
@@ -182,18 +186,22 @@
       position: absolute;
       font-size: 100px;
       color: white;
-      text-shadow:0px 10px 0px grey, 1px 1px 10px ghostwhite;
-      top:50%;
+      text-shadow: 0px 10px 0px grey, 1px 1px 10px ghostwhite;
+      top: 50%;
       animation: bounce 0.8s infinite;
       left: 50%;
       transform: translate(-50%, -60%);
       margin: 0;
       text-align: center;
     }
- 
+
     @keyframes bounce {
-      from {margin-top: 0;}
-      to {margin-top: 8px;}
+      from {
+        margin-top: 0;
+      }
+      to {
+        margin-top: 8px;
+      }
     }
     p {
       display: block;
