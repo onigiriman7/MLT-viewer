@@ -145,6 +145,14 @@
     <div id="sec_2" class="sec2">
         <h1 class="element2"></h1>
     </div>
+
+    <!-- <model-viewer
+      src="../3d/footer.glb"
+      camera-orbit="0deg 90deg 2.5m"
+      exposure="0.2"
+      alt="A 3D model of an astronaut"
+      shadow-intensity="0"
+    ></model-viewer> -->
     <!-- Script tag  -->
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
@@ -215,6 +223,8 @@
         }
 
     </script>
+     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     <script src="particles.js-master/particles.js"></script>
     <script src="particles.js-master/demo/js/app.js"></script>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
@@ -230,7 +240,7 @@
         font-family: Alloy;
         scroll-behavior: smooth;
     }
-
+   
     span {
         font-size: 72px;
     }
