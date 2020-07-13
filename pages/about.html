@@ -54,49 +54,56 @@
     <div id="sec0_5" class="sec0_5">
         <div id="marque">
             <span>
-                Branding
+                Web Dev
             </span>
             <span>
-                <img src="https://dwl.media/assets/icons/at-field.svg" style="width: 80px; height: 80px;" />
+                <img src="https://image.flaticon.com/icons/svg/2905/2905977.svg" style="width: 80px; height: 80px;" />
             </span>
             <span>
-                Art Direction
+                App Dev
             </span>
             <span>
-                <img src="https://dwl.media/assets/icons/glitter.svg" style="width: 80px; height: 80px;" />
+                <img src="https://image.flaticon.com/icons/svg/958/958847.svg" style="width: 80px; height: 80px;" />
             </span>
             <span>
-                Branding
+              Web Dev
             </span>
             <span>
-                <img src="https://dwl.media/assets/icons/at-field.svg" style="width: 80px; height: 80px;" />
+              <img src="https://image.flaticon.com/icons/svg/2905/2905977.svg" style="width: 80px; height: 80px;" />
             </span>
             <span>
-                Art Direction
+              App Dev
             </span>
+            <span>
+              <img src="https://image.flaticon.com/icons/svg/958/958847.svg" style="width: 80px; height: 80px;" />
+          </span>
         </div>
         <div id="marque1">
+          <span>
+            <img src="https://image.flaticon.com/icons/svg/3112/3112394.svg" style="width: 80px; height: 80px;" />
+        </span>
             <span>
-                Branding
+                3D Design
             </span>
             <span>
-                <img src="https://dwl.media/assets/icons/at-field.svg" style="width: 80px; height: 80px;" />
+              <img src="https://image.flaticon.com/icons/svg/2734/2734743.svg" style="width: 80px; height: 80px;" />
             </span>
             <span>
-                Art Direction
+                Game Dev
             </span>
             <span>
-                <img src="https://dwl.media/assets/icons/glitter.svg" style="width: 80px; height: 80px;" />
+              <img src="https://image.flaticon.com/icons/svg/3112/3112394.svg" style="width: 80px; height: 80px;" />
             </span>
             <span>
-                Branding
+              3D Design
             </span>
             <span>
-                <img src="https://dwl.media/assets/icons/at-field.svg" style="width: 80px; height: 80px;" />
+                <img src="https://image.flaticon.com/icons/svg/3112/3112394.svg" style="width: 80px; height: 80px;" />
             </span>
             <span>
-                Art Direction
+              Game Dev
             </span>
+           
         </div>
         <div id="marque2">
             <span>
@@ -134,25 +141,30 @@
       </div> -->
     </div>
     <div id="sec1_5" class="sec1_5">
-        <div class="varun"></div>
-        <div class="pavan"></div>
+        <div class="varun">
+          <img src="https://image.flaticon.com/icons/svg/1832/1832051.svg" style='height: 150px;width: 150px;position: absolute;right: 0;'/>
+        </div>
+        <div class="pavan"><img src="https://image.flaticon.com/icons/svg/1832/1832051.svg" style='height: 150px;width: 150px;position: absolute;'/></div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="rgb(10,10,10)" fill-opacity="1"
+        <path fill="black" fill-opacity="1"
             d="M0,192L0,256L160,256L160,128L320,128L320,160L480,160L480,128L640,128L640,288L800,288L800,192L960,192L960,128L1120,128L1120,256L1280,256L1280,224L1440,224L1440,0L1280,0L1280,0L1120,0L1120,0L960,0L960,0L800,0L800,0L640,0L640,0L480,0L480,0L320,0L320,0L160,0L160,0L0,0L0,0Z">
         </path>
     </svg>
     <div id="sec_2" class="sec2">
         <h1 class="element2"></h1>
+       
     </div>
-
-    <!-- <model-viewer
-      src="../3d/footer.glb"
-      camera-orbit="0deg 90deg 2.5m"
-      exposure="0.2"
-      alt="A 3D model of an astronaut"
-      shadow-intensity="0"
-    ></model-viewer> -->
+<div style="position: relative;height: 90vh;z-index: 999;overflow: hidden;">
+  <model-viewer
+  src="../3d/footer.glb"
+  camera-orbit="0deg 90deg 0m"
+  exposure="0.2"
+  alt="A 3D model of an astronaut"
+  shadow-intensity="0"
+></model-viewer>
+</div>
+    
     <!-- Script tag  -->
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
@@ -243,6 +255,14 @@
    
     span {
         font-size: 72px;
+    }
+
+    model-viewer{
+      height: 100vh;
+      width: 100%;
+     position: absolute;
+      top: 40%;
+      z-index: 999;
     }
 
     .sec0_5 {
@@ -387,7 +407,11 @@
     }
 
     .sec1_5 {
-        height: 80vh;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
         /* background: linear-gradient(to bottom, black, grey, lightgrey, white); */
     }
 
