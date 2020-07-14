@@ -23,8 +23,9 @@
     </div>
     <a class="animate__animated animate__tada" id="button2" href="pages/3dview.html">View Portfolio</a>
     <a class="animate__animated animate__tada" id="button3" href="pages/about.html">About Us</a>
-    <button id="button" onclick=playMusic() class="animate__animated">Play Music</button>
-    <button id="button1" onclick=pauseMusic() class="animate__animated">Pause Music</button>
+    <div class="buttonWrapper">
+        <button id="button" onclick=playMusic() class="animate__animated">Play Music</button>
+        <button id="button1" onclick=pauseMusic() class="animate__animated">Pause Music</button></div>
     <video autoplay loop muted>
         <source src="med/vaporwave.mp4" />
 
@@ -50,8 +51,17 @@
             audio.play();
         }
         function pauseMusic() {
-            audio.pause();
+            aud
+            io.pause();
         }
+
+        // var width = window.innerWidth;
+        // var height = window.innerHeight;
+        // console.log(width);
+        // console.log(height);
+        // if (width < 600) {
+        //     document.getElementsByTagName("body")[0].style.display = "none";
+        // }
     </script>
     </script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -72,7 +82,7 @@
     .animate__animated.animate__tada {
         --animate-duration: 5s;
         --animate-repeat: 7;
-       
+
     }
 
     model-viewer {
@@ -90,14 +100,12 @@
     }
 
     #button {
-        position: absolute;
+       
         padding: 18px 24px;
         font-size: 24px;
-        top: 80%;
-        right: 0;
-        left: 33%;
-        margin-left: auto;
-        margin-right: auto;
+       
+   
+      
         border: none;
         outline: none;
         background-color: rgba(238, 117, 212, 0.753);
@@ -115,14 +123,11 @@
     }
 
     #button1 {
-        position: absolute;
+     
         padding: 18px 24px;
         font-size: 24px;
-        top: 80%;
-        right: 0;
-        left: 47%;
-        margin-left: auto;
-        margin-right: auto;
+        
+
         border: none;
         outline: none;
         background-color: rgba(238, 117, 212, 0.753);
@@ -171,7 +176,7 @@
         padding: 14px 10px;
         font-size: 24px;
         top: 0%;
-   
+
         width: 100px;
         margin-top: 50px;
         margin-left: 50px;
@@ -190,6 +195,35 @@
         padding: 6px 10px;
         box-shadow: 0px 1px 0px 1px rgba(255, 0, 212, 0.822), 1px 1px 10px 1px black;
         transition: 0.2s ease;
+    }
+
+    .buttonWrapper{
+        width:100vw;
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        top: 80%;
+        height: auto;
+        padding: 0px;
+    }
+
+    @media (max-width: 600px){
+        #button2,#button3{
+            padding: 10px 12px;
+            margin: 20px;
+            font-size: 22px;
+            
+        }
+        #button,#button1{
+            transform:scale(0.8);
+            margin-left: -80px;
+        }
+
+        #button2{
+            margin-left: -80px;
+        }
     }
 </style>
 
