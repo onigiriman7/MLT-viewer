@@ -27,7 +27,7 @@
     ></model-viewer>
 
     <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'London');remove()">
+      <button class="tablinks" onclick="openCityL(event);remove()">
         Left
       </button>
       <button class="tablinks" onclick="playMusic()">
@@ -36,20 +36,25 @@
       <button class="tablinks" onclick="pauseMusic()">
         Pause Music
       </button>
-      <button class="tablinks" onclick="openCity(event, 'Tokyo');remove()">
+      <button class="tablinks" onclick="openCityR(event);remove()">
         Right
       </button>
     </div>
     <audio id="playAudio" loop>
       <source src="../med/bg.mp3" type="audio/mpeg" />
     </audio>
-    <div id="London" class="tabcontent">
+    <div id="1" class="tabcontent">
       <a href="https://icinprobengaluru.now.sh/"><h3>icinpro</h3></a>
     </div>
 
-    <div id="Tokyo" class="tabcontent">
+    <div id="2" class="tabcontent">
       <a href="https://github.com/onigiriman7/ReactNative-MiniGame">
         <h3>coolest RPS</h3></a
+      >
+    </div>
+    <div id="3" class="tabcontent">
+      <a href="https://github.com/onigiriman7/ReactNative-MiniGame">
+        <h3>Corona tracker</h3></a
       >
     </div>
     <h2 id="lol">Click Left or Right</h2>
@@ -57,7 +62,8 @@
       <img src="frame.png" />
     </div> -->
     <script>
-      function openCity(evt, cityName) {
+      var j = 2;
+      function openCityR(evt) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
@@ -67,7 +73,27 @@
         for (i = 0; i < tablinks.length; i++) {
           tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
-        document.getElementById(cityName).style.display = "block";
+        if(j<=2){
+          j+=1;
+        }
+        document.getElementById(j).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      function openCityL(evt) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        if(j>1){
+          j-=1;
+        }
+        
+        document.getElementById(j).style.display = "block";
         evt.currentTarget.className += " active";
       }
       var audio = document.getElementById("playAudio");
